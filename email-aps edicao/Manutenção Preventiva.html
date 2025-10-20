@@ -4,14 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APS Distribuidora - Ainda dá para aproveitar</title>
+    <title>APS Distribuidora - Manutenção Preventiva</title>
     <style>
+        /* Base global */
         body {
             margin: 0;
             padding: 0;
+            background: #F3F3F5;
+            /* substituído o #f4f4f4 */
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            -webkit-font-smoothing: antialiased;
             line-height: 1.6;
+        }
+
+        table {
+            border-collapse: collapse;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            border: 0;
+            display: block;
+            height: auto;
         }
 
         .container {
@@ -19,14 +34,20 @@
             margin: 0 auto;
             background-color: #ffffff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            /* pegando do .main */
+            overflow: hidden;
         }
 
+        /* Header estilizado como na primeira CSS */
         .header {
             background: linear-gradient(135deg, #333a47 0%, #4a525f 100%);
             color: white;
             padding: 30px 20px;
             text-align: center;
             position: relative;
+            border-radius: 10px 10px 0 0;
+            /* arredondamento do topo do container */
         }
 
         .logo {
@@ -38,6 +59,7 @@
         .header h1 {
             margin: 0;
             font-size: 24px;
+            /* pode ajustar para 22px em mobile */
             font-weight: bold;
         }
 
@@ -45,6 +67,71 @@
             margin: 10px 0 0 0;
             font-size: 14px;
             opacity: 0.9;
+        }
+
+        .btn {
+            background: #F94336;
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+            font-size: 15px;
+        }
+
+        .pill {
+            display: inline-block;
+            background: #EEF1F6;
+            border: 1px solid #E0E5EE;
+            border-radius: 999px;
+            padding: 6px 10px;
+            font-size: 12px;
+            color: #0F172A;
+        }
+
+        .muted {
+            color: #5B616E;
+        }
+
+        /* Responsivo */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 22px !important;
+                line-height: 30px !important;
+            }
+
+            .stack {
+                display: block !important;
+                width: 100% !important;
+            }
+
+            .stats {
+                flex-direction: column;
+            }
+
+            .stat {
+                margin-bottom: 15px;
+            }
+        }
+
+        /* Mantendo o restante do CSS da segunda base */
+        .content {
+            padding: 30px 20px;
+        }
+
+        .intro {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #333a47;
+            margin-bottom: 30px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .intro h2 {
+            margin: 0 0 10px 0;
+            color: #333a47;
+            font-size: 18px;
         }
 
         .content {
@@ -492,17 +579,15 @@
 
 <body>
     <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDQwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPCEtLSBMb2dvIEFQUyBEaXN0cmlidWlkb3JhIC0tPgogIDxnIGlkPSJhcHMtbG9nbyI+CiAgICA8IS0tIEFQUyBUZXh0IC0tPgogICAgPHRleHQgeD0iMjAiIHk9IjgwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMzMzYTQ3Ij5BUFM8L3RleHQ+CiAgICA8IS0tIERJU1RSSUJVSURPUkEgVGV4dCAtLT4KICAgIDx0ZXh0IHg9IjIwIiB5PSIxMTAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZmlsbD0iI2ZmNGQ0ZCI+RElTVFJJQlVJRE9SQTwvdGV4dD4KICAgIDwhLS0gMzIgQW5vcyAtLT4KICAgIDx0ZXh0IHg9IjI4MCIgeT0iNDAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNkYWE1MjAiPjMyPC90ZXh0PgogICAgPHRleHQgeD0iMjgwIiB5PSI2MCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0ibm9ybWFsIiBmaWxsPSIjZGFhNTIwIj5BTk9TPC90ZXh0PgogICAgPHRleHQgeD0iMjgwIiB5PSIxMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZmlsbD0iI2RhYTUyMCI+Q1JFU0NFTkRPPC90ZXh0PgogICAgPHRleHQgeD0iMjgwIiB5PSIxMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZmlsbD0iI2RhYTUyMCI+SlVOVE9TPC90ZXh0PgogIDwvZz4KPC9zdmc+"
-                alt="APS Distribuidora" class="logo" width="600">
+        <div style="background:#343947; text-align:center; padding:16px;">
+            <a href="https://www.apsdistribuidora.com.br/home" target="_blank">
+                <img src="https://www.apsdistribuidora.com.br/wp-content/uploads/2021/05/cropped-LOGO-32-ANOS-SEM-FUNDO-2-300x103.png"
+                    width="220" alt="APS Distribuidora" style="display:block; margin:0 auto;">
+            </a>
         </div>
-
         <div class="section-title">
-            <h1>APS Distribuidora - <span>Aproveite enquanto há tempo!</span></h1>
+            <h1>APS Distribuidora - <span>Manutenção Preventiva</span></h1>
         </div>
-
-
 
         <!-- Content -->
         <div class="content">
@@ -632,7 +717,7 @@
                 <p>Tenha sempre as peças certas em estoque e garanta manutenção preventiva eficiente para seus clientes.
                 </p>
 
-                <a href="#" class="cta-button">FALAR COM ESPECIALISTA</a>
+                <a href="https://wa.me/551936344855" class="cta-button">FALAR COM ESPECIALISTA</a>
 
                 <div class="cta-summary">
                     <h4>Resumo rápido para aplicar:</h4>

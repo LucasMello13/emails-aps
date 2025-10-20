@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APS Distribuidora - Manutenção Preventiva</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+      background: linear-gradient(135deg, #333a47 0%, #4a525f 100%);
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .logo {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .header p {
+      margin: 10px 0 0 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .content {
+      padding: 30px 20px;
+    }
+
+    .intro {
+      background: #f8f9fa;
+      padding: 20px;
+      border-left: 4px solid #333a47;
+      margin-bottom: 30px;
+      border-radius: 0 5px 5px 0;
+    }
+
+    .intro h2 {
+      margin: 0 0 10px 0;
+      color: #333a47;
+      font-size: 18px;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .section h3 {
+      color: #333a47;
+      border-bottom: 2px solid #e9ecef;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    .highlight-box {
+      background: #fff3cd;
+      border: 1px solid #ffeaa7;
+      padding: 15px;
+      border-radius: 5px;
+      margin: 15px 0;
+    }
+
+    .highlight-box h4 {
+      color: #856404;
+      margin: 0 0 10px 0;
+      font-size: 14px;
+    }
+
+    .stats {
+      display: flex;
+      justify-content: space-between;
+      background: #e9ecef;
+      padding: 20px;
+      border-radius: 5px;
+      margin: 20px 0;
+    }
+
+    .stat {
+      text-align: center;
+      flex: 1;
+    }
+
+    .stat-number {
+      font-size: 24px;
+      font-weight: bold;
+      color: #333a47;
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: #6c757d;
+      margin-top: 5px;
+    }
+
+    .checklist {
+      background: #d4edda;
+      border: 1px solid #c3e6cb;
+      padding: 15px;
+      border-radius: 5px;
+      margin: 15px 0;
+    }
+
+    .checklist h4 {
+      color: #155724;
+      margin: 0 0 10px 0;
+      font-size: 14px;
+    }
+
+    .checklist ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .checklist li {
+      margin-bottom: 5px;
+      color: #155724;
+    }
+
+    .cta {
+      background: #333a47;
+      color: white;
+      padding: 25px;
+      text-align: center;
+      margin: 30px 0;
+      border-radius: 5px;
+    }
+
+    .cta h3 {
+      margin: 0 0 15px 0;
+      color: white;
+      border: none;
+      padding: 0;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #28a745;
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .footer {
+      background: #343a40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .footer a {
+      color: #ffc107;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .stats {
+        flex-direction: column;
+      }
+
+      .stat {
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <img
+        src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDQwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPCEtLSBMb2dvIEFQUyBEaXN0cmlidWlkb3JhIC0tPgogIDxnIGlkPSJhcHMtbG9nbyI+CiAgICA8IS0tIEFQUyBUZXh0IC0tPgogICAgPHRleHQgeD0iMjAiIHk9IjgwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMzMzYTQ3Ij5BUFM8L3RleHQ+CiAgICA8IS0tIERJU1RSSUJVSURPUkEgVGV4dCAtLT4KICAgIDx0ZXh0IHg9IjIwIiB5PSIxMTAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZmlsbD0iI2ZmNGQ0ZCI+RElTVFJJQlVJRE9SQTwvdGV4dD4KICAgIDwhLS0gMzIgQW5vcyAtLT4KICAgIDx0ZXh0IHg9IjI4MCIgeT0iNDAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNkYWE1MjAiPjMyPC90ZXh0PgogICAgPHRleHQgeD0iMjgwIiB5PSI2MCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0ibm9ybWFsIiBmaWxsPSIjZGFhNTIwIj5BTk9TPC90ZXh0PgogICAgPHRleHQgeD0iMjgwIiB5PSIxMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZmlsbD0iI2RhYTUyMCI+Q1JFU0NFTkRPPC90ZXh0PgogICAgPHRleHQgeD0iMjgwIiB5PSIxMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZmlsbD0iI2RhYTUyMCI+SlVOVE9TPC90ZXh0PgogIDwvZz4KPC9zdmc+"
+        alt="APS Distribuidora" class="logo">
+      <h1>🔧 MANUTENÇÃO PREVENTIVA</h1>
+      <p>O segredo para manter seus clientes satisfeitos e aumentar sua receita</p>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <!-- Intro -->
+      <div class="intro">
+        <h2>Seu cliente chegou com o motor superaquecido?</h2>
+        <p>Esta situação poderia ter sido evitada com uma simples manutenção preventiva. Descubra como orientar seus
+          clientes e transformar isso em oportunidade de negócio.</p>
+      </div>
+
+      <!-- Estatísticas -->
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-number">70%</span>
+          <div class="stat-label">das falhas no motor são causadas por superaquecimento</div>
+        </div>
+        <div class="stat">
+          <span class="stat-number">R$ 8.000</span>
+          <div class="stat-label">custo médio de um motor fundido</div>
+        </div>
+        <div class="stat">
+          <span class="stat-number">90%</span>
+          <div class="stat-label">dos problemas podem ser prevenidos</div>
+        </div>
+      </div>
+
+      <!-- Seção 1 -->
+      <div class="section">
+        <h3>💡 Por que seus clientes precisam saber disso?</h3>
+        <p>Quando você explica a importância da manutenção preventiva, seu cliente entende que você se preocupa com o
+          bem-estar dele, não apenas em vender peças quando quebra.</p>
+
+        <div class="highlight-box">
+          <h4>⚠️ O QUE ACONTECE QUANDO NÃO HÁ MANUTENÇÃO:</h4>
+          <ul>
+            <li><strong>Radiador entupido:</strong> Motor superaquece em poucos quilômetros</li>
+            <li><strong>Bomba d'água com defeito:</strong> Circulação inadequada causa danos internos</li>
+            <li><strong>Termostato travado:</strong> Temperatura descontrolada compromete o motor</li>
+            <li><strong>Fluido contaminado:</strong> Corrosão acelera desgaste de componentes</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Seção 2 -->
+      <div class="section">
+        <h3>🎯 Como orientar seu cliente (e aumentar suas vendas)</h3>
+
+        <div class="checklist">
+          <h4>✅ CHECKLIST DE MANUTENÇÃO PREVENTIVA - PASSE PARA SEU CLIENTE:</h4>
+          <ul>
+            <li><strong>A cada 10.000 km:</strong> Verificar nível e cor do fluido de arrefecimento</li>
+            <li><strong>A cada 20.000 km:</strong> Inspeção visual do radiador e mangueiras</li>
+            <li><strong>A cada 40.000 km:</strong> Troca completa do fluido de arrefecimento</li>
+            <li><strong>A cada 60.000 km:</strong> Verificação da bomba d'água e termostato</li>
+            <li><strong>Sempre:</strong> Observar sinais de vazamento ou superaquecimento</li>
+          </ul>
+        </div>
+
+        <p><strong>DICA PARA SEU NEGÓCIO:</strong> Crie um calendário de manutenção personalizado para cada cliente.
+          Isso gera relacionamento duradouro e vendas recorrentes.</p>
+      </div>
+
+      <!-- Seção 3 -->
+      <div class="section">
+        <h3>💰 O lado financeiro que seu cliente precisa entender</h3>
+
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin: 15px 0;">
+          <h4 style="color: #333a47; margin: 0 0 10px 0;">COMPARATIVO DE CUSTOS:</h4>
+          <p><strong style="color: #28a745;">Manutenção Preventiva:</strong> R$ 200 a R$ 400 por ano</p>
+          <p><strong style="color: #dc3545;">Reparo Corretivo:</strong> R$ 1.500 a R$ 8.000 por ocorrência</p>
+          <p style="margin: 15px 0 0 0; font-style: italic; color: #6c757d;">*Valores médios considerando veículos de
+            passeio</p>
+        </div>
+
+        <p>Quando você mostra esses números para seu cliente, ele entende que manutenção preventiva é
+          <strong>investimento, não gasto</strong>.
+        </p>
+      </div>
+
+      <!-- Seção 4 -->
+      <div class="section">
+        <h3>🔍 Sinais que você deve ensinar seu cliente a observar</h3>
+
+        <div style="display: flex; justify-content: space-between; margin: 20px 0;">
+          <div style="flex: 1; margin-right: 10px; background: #fff3cd; padding: 15px; border-radius: 5px;">
+            <h4 style="color: #856404; margin: 0 0 10px 0;">🌡️ TEMPERATURA</h4>
+            <ul style="margin: 0; padding-left: 15px; font-size: 14px;">
+              <li>Ponteiro acima do normal</li>
+              <li>Demora para aquecer</li>
+              <li>Oscilação na temperatura</li>
+            </ul>
+          </div>
+          <div style="flex: 1; margin-left: 10px; background: #d1ecf1; padding: 15px; border-radius: 5px;">
+            <h4 style="color: #0c5460; margin: 0 0 10px 0;">💧 VAZAMENTOS</h4>
+            <ul style="margin: 0; padding-left: 15px; font-size: 14px;">
+              <li>Poças sob o veículo</li>
+              <li>Nível baixo constante</li>
+              <li>Vapor no capô</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta">
+        <h3>🚀 Transforme conhecimento em resultados</h3>
+        <p>Quer ter sempre em estoque as peças certas para manutenção preventiva? Nossa equipe técnica pode ajudar você
+          a montar um mix ideal para seu negócio.</p>
+        <a href="#" class="cta-button">FALAR COM ESPECIALISTA</a>
+        <p style="margin: 15px 0 0 0; font-size: 14px; opacity: 0.9;">📞 (19) 3634-1234 | 📧
+          vendas@apsdistribuidora.com.br</p>
+      </div>
+
+      <!-- Conclusão -->
+      <div class="section">
+        <h3>🎯 Resumo para aplicar hoje na sua empresa</h3>
+        <ol>
+          <li><strong>Eduque seu cliente</strong> sobre a importância da manutenção preventiva</li>
+          <li><strong>Crie um cronograma</strong> personalizado de manutenção</li>
+          <li><strong>Mantenha estoque</strong> das peças mais utilizadas em preventiva</li>
+          <li><strong>Ofereça pacotes</strong> de manutenção com preço atrativo</li>
+          <li><strong>Acompanhe o cliente</strong> através de lembretes periódicos</li>
+        </ol>
+
+        <div style="background: #d4edda; border: 1px solid #c3e6cb; padding: 15px; border-radius: 5px; margin: 20px 0;">
+          <p style="margin: 0; color: #155724;"><strong>LEMBRE-SE:</strong> Cliente educado é cliente fiel. E cliente
+            fiel gera receita recorrente para seu negócio.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p><strong>APS Distribuidora</strong> - 32 anos conectando você ao sucesso</p>
+      <p>📍 São João da Boa Vista - SP | 🌐 <a href="#">www.apsdistribuidora.com.br</a></p>
+      <p style="margin-top: 15px; font-size: 11px; opacity: 0.7;">
+        Você está recebendo este e-mail porque é parceiro APS.
+        <a href="#" style="color: #ffc107;">Descadastrar</a> |
+        <a href="#" style="color: #ffc107;">Atualizar preferências</a>
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>
