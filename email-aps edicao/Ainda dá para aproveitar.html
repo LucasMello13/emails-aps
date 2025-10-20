@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APS Distribuidora - Ainda dá para aproveitar</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #333a47 0%, #4a525f 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 30px 20px;
+        }
+
+        .intro {
+            background: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #333a47;
+            margin-bottom: 30px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .intro h2 {
+            margin: 0 0 10px 0;
+            color: #333a47;
+            font-size: 18px;
+        }
+
+        .section h3 {
+            font-size: 1.5rem;
+            color: #333a47;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Blocos financeiros */
+        .cost-box {
+            display: flex;
+            justify-content: space-around;
+            gap: 15px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .cost-item {
+            flex: 1 1 200px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .cost-item h4 {
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .cost-item p {
+            margin: 0;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .preventive {
+            background-color: #d4edda;
+            color: #155724;
+            border-left: 5px solid #28a745;
+        }
+
+        .corrective {
+            background-color: #f8d7da;
+            color: #721c24;
+            border-left: 5px solid #dc3545;
+        }
+
+        .note {
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* Sinais a observar */
+        .signals-box {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .signal-item {
+            flex: 1 1 200px;
+            padding: 18px;
+            border-radius: 10px;
+            background: #f8f9fa;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .signal-item h4 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            text-align: center;
+            /* centraliza o título */
+        }
+
+        .signal-item ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .signal-item ul li {
+            display: flex;
+            /* cria linha flexível */
+            align-items: flex-start;
+            /* alinha o bullet no topo do texto */
+            gap: 8px;
+            /* espaço entre bullet e texto */
+        }
+
+        .signal-item ul li::before {
+            content: "•";
+            /* bolinha */
+            flex-shrink: 0;
+            /* impede de encolher */
+            width: 1.5em;
+            /* largura fixa para alinhamento */
+            text-align: center;
+            /* centraliza a bolinha */
+            color: #da5a20;
+            font-size: 1rem;
+        }
+
+
+
+        /* Cores específicas para cada sinal */
+        .temperature {
+            border-left: 5px solid #ffc107;
+            background-color: #fff3cd;
+            color: #856404;
+        }
+
+        .leaks {
+            border-left: 5px solid #17a2b8;
+            background-color: #d1ecf1;
+            color: #0c5460;
+        }
+
+
+
+        .checklist,
+        .tip-box {
+            background: #f8f9fa;
+            border-left: 5px solid #28a745;
+            /* destaque verde para checklist/dicas */
+            padding: 18px 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .checklist h4,
+        .tip-box h4 {
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+            color: #333a47;
+        }
+
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .checklist ul li::before {
+            content: "•";
+            color: #28a745;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .checklist ul li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .tip-box p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+
+        .highlight-box,
+        .tips-box {
+            background: #f8f9fa;
+            border-left: 5px solid #da5a20;
+            /* destaque do lado esquerdo */
+            padding: 18px 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .highlight-box h4,
+        .tips-box h4 {
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+            color: #333a47;
+        }
+
+        .highlight-box ul,
+        .tips-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .highlight-box ul li::before,
+        .tips-box ul li::before {
+            content: "•";
+            color: #da5a20;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .highlight-box ul li,
+        .tips-box ul li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            background: #e9ecef;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .stat {
+            text-align: center;
+            flex: 1;
+        }
+
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333a47;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+
+        .checklist {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        .checklist h4 {
+            color: #155724;
+            margin: 0 0 10px 0;
+            font-size: 14px;
+        }
+
+        .checklist ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .checklist li {
+            margin-bottom: 5px;
+            color: #155724;
+        }
+
+        .cta-modern {
+            background: linear-gradient(135deg, #333a47, #4a525f);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            margin: 40px 0;
+        }
+
+        .cta-modern h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .cta-modern p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 14px 35px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #218838;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+        }
+
+        .cta-summary {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin: 25px auto 20px auto;
+            text-align: left;
+        }
+
+        .cta-summary h4 {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .cta-summary ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .cta-summary ul li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .cta-summary ul li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .cta-note {
+            font-size: 0.95rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+
+        .footer {
+            background: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .stats {
+                flex-direction: column;
+            }
+
+            .stat {
+                margin-bottom: 15px;
+            }
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 30px auto 0px auto;
+        }
+
+        .section-title h1 {
+            display: inline-block;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #333a47;
+            padding: 5px 24px;
+            border: 2px solid #333a47;
+            /* contorno ao redor do título */
+            border-radius: 12px;
+            /* cantos arredondados */
+            letter-spacing: 0.5px;
+        }
+
+        .section-title h1 span {
+            color: #daa520;
+            /* destaque no subtítulo */
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            /* torna responsivo */
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            flex: 1 1 200px;
+            /* ocupa espaço igual, mínimo 200px */
+            padding: 25px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #333a47;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDQwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPCEtLSBMb2dvIEFQUyBEaXN0cmlidWlkb3JhIC0tPgogIDxnIGlkPSJhcHMtbG9nbyI+CiAgICA8IS0tIEFQUyBUZXh0IC0tPgogICAgPHRleHQgeD0iMjAiIHk9IjgwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iNDgiIGZvbnQtd2VpZ2h0PSJib2xkIiBmaWxsPSIjMzMzYTQ3Ij5BUFM8L3RleHQ+CiAgICA8IS0tIERJU1RSSUJVSURPUkEgVGV4dCAtLT4KICAgIDx0ZXh0IHg9IjIwIiB5PSIxMTAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZmlsbD0iI2ZmNGQ0ZCI+RElTVFJJQlVJRE9SQTwvdGV4dD4KICAgIDwhLS0gMzIgQW5vcyAtLT4KICAgIDx0ZXh0IHg9IjI4MCIgeT0iNDAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNkYWE1MjAiPjMyPC90ZXh0PgogICAgPHRleHQgeD0iMjgwIiB5PSI2MCIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmb250LXdlaWdodD0ibm9ybWFsIiBmaWxsPSIjZGFhNTIwIj5BTk9TPC90ZXh0PgogICAgPHRleHQgeD0iMjgwIiB5PSIxMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZmlsbD0iI2RhYTUyMCI+Q1JFU0NFTkRPPC90ZXh0PgogICAgPHRleHQgeD0iMjgwIiB5PSIxMTUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZm9udC13ZWlnaHQ9Im5vcm1hbCIgZmlsbD0iI2RhYTUyMCI+SlVOVE9TPC90ZXh0PgogIDwvZz4KPC9zdmc+"
+                alt="APS Distribuidora" class="logo" width="600">
+        </div>
+
+        <div class="section-title">
+            <h1>APS Distribuidora - <span>Aproveite enquanto há tempo!</span></h1>
+        </div>
+
+
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Intro -->
+            <div class="intro">
+                <h2 class="intro-title">🚗 Motor Superaquecido?</h2>
+                <p class="intro-text">
+                    Esta situação poderia ter sido evitada com uma simples manutenção preventiva.
+                    Descubra como orientar seus clientes e transformar isso em uma oportunidade de negócio.
+                </p>
+            </div>
+
+
+            <!-- Estatísticas -->
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-icon">🔥</div>
+                    <div class="stat-number">70%</div>
+                    <div class="stat-label">Falhas por superaquecimento</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💸</div>
+                    <div class="stat-number">R$ 8.000</div>
+                    <div class="stat-label">Custo médio motor fundido</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">✅</div>
+                    <div class="stat-number">90%</div>
+                    <div class="stat-label">Problemas preveníveis</div>
+                </div>
+            </div>
+
+
+            <!-- Seção 1 -->
+            <div class="section">
+                <h3> Por que seus clientes precisam saber?</h3>
+                <p>Educar seu cliente sobre manutenção preventiva demonstra cuidado e gera confiança.</p>
+
+                <div class="highlight-box">
+                    <h4>⚠️ Riscos da falta de manutenção:</h4>
+                    <ul>
+                        <li>Radiador entupido → superaquecimento rápido</li>
+                        <li>Bomba d'água com defeito → circulação inadequada</li>
+                        <li>Termostato travado → temperatura descontrolada</li>
+                        <li>Fluido contaminado → desgaste acelerado</li>
+                    </ul>
+                </div>
+
+                <div class="tips-box">
+                    <h4>💡 Dicas rápidas:</h4>
+                    <ul>
+                        <li>Verifique fluido e radiador regularmente</li>
+                        <li>Observe sinais de superaquecimento</li>
+                        <li>Agende manutenção preventiva periodicamente</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- Seção 2 -->
+            <div class="section">
+                <h3>Como orientar seu cliente</h3>
+
+                <div class="checklist">
+                    <h4>✅ Checklist de Manutenção Preventiva</h4>
+                    <ul>
+                        <li><strong>10.000 km:</strong> Verificar nível e cor do fluido de arrefecimento</li>
+                        <li><strong>20.000 km:</strong> Inspeção visual do radiador e mangueiras</li>
+                        <li><strong>40.000 km:</strong> Troca completa do fluido de arrefecimento</li>
+                        <li><strong>60.000 km:</strong> Verificação da bomba d'água e termostato</li>
+                        <li><strong>Sempre:</strong> Observar sinais de vazamento ou superaquecimento</li>
+                    </ul>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 Dica para seu negócio</h4>
+                    <p>Crie um calendário de manutenção personalizado para cada cliente. Isso gera
+                        <strong>relacionamento duradouro</strong> e <strong>vendas recorrentes</strong>.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- Seção 3 + 4 -->
+            <div class="section">
+                <h3> Lado financeiro e Sinais importantes</h3>
+
+                <!-- Comparativo financeiro -->
+                <div class="cost-box">
+                    <div class="cost-item preventive">
+                        <h4>Manutenção Preventiva</h4>
+                        <p>R$ 200 a R$ 400 / ano</p>
+                    </div>
+                    <div class="cost-item corrective">
+                        <h4>Reparo Corretivo</h4>
+                        <p>R$ 1.500 a R$ 8.000 / ocorrência</p>
+                    </div>
+                </div>
+                <p class="note">*Valores médios considerando veículos de passeio</p>
+                <p>Mostrando esses números, seu cliente percebe que <strong>manutenção preventiva é investimento, não
+                        gasto</strong>.</p>
+
+                <!-- Sinais a observar -->
+                <div class="signals-box">
+                    <div class="signal-item temperature">
+                        <h4>🌡️ Temperatura</h4>
+                        <ul>
+                            <li>Ponteiro acima do normal</li>
+                            <li>Demora para aquecer</li>
+                            <li>Oscilação na temperatura</li>
+                        </ul>
+                    </div>
+                    <div class="signal-item leaks">
+                        <h4>💧 Vazamentos</h4>
+                        <ul>
+                            <li>Poças sob o veículo</li>
+                            <li>Nível baixo constante</li>
+                            <li>Vapor no capô</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- CTA + Resumo Modernizado -->
+            <div class="cta-modern">
+                <h3>🚀 Transforme conhecimento em resultados</h3>
+                <p>Tenha sempre as peças certas em estoque e garanta manutenção preventiva eficiente para seus clientes.
+                </p>
+
+                <a href="#" class="cta-button">FALAR COM ESPECIALISTA</a>
+
+                <div class="cta-summary">
+                    <h4>Resumo rápido para aplicar:</h4>
+                    <ul>
+                        <li>Eduque seu cliente sobre manutenção preventiva</li>
+                        <li>Crie um cronograma personalizado</li>
+                        <li>Mantenha estoque das peças essenciais</li>
+                        <li>Ofereça pacotes de manutenção atrativos</li>
+                    </ul>
+                </div>
+
+                <p class="cta-note"><strong>LEMBRE-SE:</strong> Cliente educado é cliente fiel e gera receita
+                    recorrente.</p>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p><strong>APS Distribuidora</strong> - 32 anos conectando você ao sucesso</p>
+            <p>📍 São João da Boa Vista - SP | 🌐 <a href="#">www.apsdistribuidora.com.br</a></p>
+            <p style="margin-top: 15px; font-size: 11px; opacity: 0.7;">
+                Você está recebendo este e-mail porque é parceiro APS.
+                <a href="#" style="color: #ffc107;">Descadastrar</a> |
+                <a href="#" style="color: #ffc107;">Atualizar preferências</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
