@@ -55,20 +55,7 @@
       font-size: 15px
     }
 
-    .pill {
-      display: inline-block;
-      background: #EEF1F6;
-      border: 1px solid #E0E5EE;
-      border-radius: 999px;
-      padding: 6px 10px;
-      font-size: 12px;
-      color: #0F172A
-    }
-
-    .muted {
-      color: #5B616E
-    }
-
+    /* Estilos Mobile */
     @media (max-width:600px) {
       h1 {
         font-size: 22px !important;
@@ -77,18 +64,22 @@
 
       .stack {
         display: block !important;
-        width: 100% !important
+        width: 100% !important;
+        padding-bottom: 20px !important;
+      }
+
+      .mobile-pad {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
       }
     }
   </style>
-  <!--[if mso]><style>body,table,td{font-family:Arial,sans-serif!important}</style><![endif]-->
 </head>
 
 <body>
   <center class="wrapper">
     <table role="presentation" class="main" width="100%">
 
-      <!-- HEADER -->
       <tr>
         <td style="background:#343947;text-align:center;padding:16px">
           <a href="https://www.apsdistribuidora.com.br/home" target="_blank">
@@ -99,287 +90,130 @@
         </td>
       </tr>
 
-      <!-- HERO COM TÍTULO E SELO -->
       <tr>
         <td style="padding:0">
           <table role="presentation" width="100%">
-
-            <br>
             <tr>
-              <td align="center" style="padding:32px 20px;background:#F9FAFB;">
-                <table role="presentation" width="100%" style="max-width:600px;margin:0 auto;border-spacing:0;">
-                  <tr>
-                    <td style="
-                      background:#FFFFFF;
-                      border:2px solid #005A8C;
-                      border-radius:14px;
-                      padding:28px 20px;
-                      box-shadow:0 4px 10px rgba(0,0,0,0.06);
-                      text-align:center;
-                    ">
-                      <h1 style="
-                        margin:0;
-                        font-size:30px;
-                        line-height:38px;
-                        font-weight:900;
-                        color:#1F2937;
-                        letter-spacing:0.5px;
-                        text-transform:uppercase;
-                        font-family:Arial, Helvetica, sans-serif;
-                      ">
-                        <span style="display:block;color:#005A8C;">Promoção Imperdível</span>
-                        <span style="display:block;color:#F94336;font-size:26px;margin-top:6px;">
-                          Confira e se surpreenda!
-                        </span>
-                      </h1>
-
-                      <hr style="
-                        border:none;
-                        height:3px;
-                        background:#005A8C;
-                        width:60px;
-                        margin:20px auto;
-                        border-radius:2px;
-                      ">
-                    </td>
-                  </tr>
-                </table>
-              </td>
-            </tr>
-
-
-            <!-- ====== TÍTULO ====== -->
-            <tr>
-              <td style="text-align:center; padding: 40px 0;">
-                <p style="
-                  font-size: 26px;
-                  font-weight: 900;
-                  color: #0f172a;
-                  text-transform: uppercase;
-                  margin-top: 6px 0 6px;
-                  letter-spacing: 0.8px;
-                  line-height: 1.3;
-                  padding: 0;
-                  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-                ">
-                  ADITIVO DE ARREFECIMENTO<br>
-                </p>
-
-                <!-- Linha decorativa -->
-                <div style="
-                  width: 80px;
-                  height: 3px;
-                  background: linear-gradient(90deg, #F94336, #005A8C);
-                  margin: 10px auto 0;
-                  border-radius: 4px;
-                "></div>
-              </td>
-            </tr>
-
-            <!-- ====== GRADE DE ITENS ====== -->
-            <tr>
-              <td style="padding:8px 0px 14px;">
-                <div style="width:100%;max-width:700px;margin:0 auto;display:block;">
-                  <table role="presentation" width="100%" style="border-collapse:collapse;">
-                    <tr>
-                      <td class="stack" width="100%" align="center" valign="top" style="padding:0;">
-                        <table role="presentation" width="100%" style="
-              border:1px solid #E2E8F0;
-              border-radius:18px;
-              background:#ffffff;
-              box-shadow:0 6px 18px rgba(0,0,0,0.08);
-              text-align:center;
-              transition:all 0.3s ease;
-            ">
-                          <tr>
-                            <td style="padding:0;">
-                              <img src="https://www.apsdistribuidora.com.br/imagens/produto/0000000030783_img.jpg"
-                                alt="RADIADORES" style="
-                      display:block;
-                      margin:0 auto;
-                      border-radius:14px;
-                      width:100%;
-                      height:auto;
-                      max-width: 480px; /* antes era 100% dentro de 450px, agora aumenta */
-                      object-fit:cover;
-                      box-shadow:0 0 20px rgba(0,90,140,0.25);
-                      border:2px solid rgba(0,90,140,0.15);
-                    ">
-                              <p style="
-                        font-size:16px;
-                        font-weight:700;
-                        color:#F94336;
-                        margin:0 0 12px;
-                        letter-spacing:0.3px;
-                        text-transform:uppercase;
-                      ">
-                                Limite de 3 caixas por cliente
-                              </p>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
+              <td style="padding:0;">
+                <div
+                  style="background: linear-gradient(135deg, #005A8C 0%, #003a5c 100%); padding: 40px 20px; text-align: center;">
+                  <p
+                    style="color: #60a5fa; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin: 0 0 10px 0;">
+                    Oportunidade Exclusiva </p>
+                  <h1
+                    style="color: #ffffff; margin: 0; font-size: 32px; line-height: 1.2; font-weight: 800; text-transform: uppercase;">
+                    Toda Linha de
+                    Aditivos <br> <span
+                      style="color: #F94336; background: rgba(255,255,255,0.1); padding: 0 10px; border-radius: 4px;">com
+                      preço especial</span> </h1>
+                  <p style="color: #e2e8f0; font-size: 16px; margin: 15px 0 0 0;"> Qualidade superior com preço especial
+                    para reposição. </p>
+                </div>
+                <div
+                  style="height: 10px; background: #ffffff; margin-top: -10px; border-radius: 20px 20px 0 0; position: relative;">
                 </div>
               </td>
             </tr>
 
+
             <tr>
-              <td style="text-align:center;padding:36px 24px 24px;background:#F9FAFB;border-radius:12px;">
-                <p style="
-                  font-size:18px;
-                  font-weight:700;
-                  color:#1F2937;
-                  margin:0 0 20px;
-                  letter-spacing:0.3px;
-                ">
-                  Confira também nossos outros itens com <span style="color:#0072C6;">preços baixos</span>:
-                </p>
+              <td style="padding: 10px 20px 30px;">
+                <table role="presentation" width="100%" style="border-collapse:collapse;">
 
-                <table role="presentation" width="100%" style="border-spacing:0;max-width:500px;margin:0 auto;">
                   <tr>
-
-                    <!-- CARD 1 -->
-                    <td align="center" width="50%" style="padding:10px;">
-                      <table role="presentation" width="100%"
-                        style="background:#FFFFFF;border:1px solid #E5E7EB;border-radius:10px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
-                        <tr>
-                          <td style="text-align:center;">
-                            <div style="
-                              width:60px;
-                              height:60px;
-                              margin:0 auto 10px;
-                              display:flex;
-                              align-items:center;
-                              justify-content:center;
-                              font-weight:800;
-                              color:#0072C6;
-                              font-size:32px;
-                              font-family:Arial, sans-serif;
-                            ">
-                              1
-                            </div>
-
-
-                            <p style="margin:0;font-size:14px;font-weight:600;color:#1F2937;">
-                              Radiadores
-                            </p>
-                            <p style="margin:4px 0 0;font-size:12px;color:#6B7280;">
-                              Alta eficiência térmica
-                            </p>
-                          </td>
-                        </tr>
-                      </table>
+                    <td align="center" style="padding-bottom: 25px;">
+                      <img src="https://w7startup.com.br/ImagensAPS/todosaditivos.jpeg" alt="Linha Completa de Aditivos"
+                        style="width: 100%; max-width: 500px; height: auto; border-radius: 12px; border: 1px solid #ddd;">
                     </td>
-
-                    <!-- CARD 2 -->
-                    <td align="center" width="50%" style="padding:10px;">
-                      <table role="presentation" width="100%"
-                        style="background:#FFFFFF;border:1px solid #E5E7EB;border-radius:10px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
-                        <tr>
-                          <td style="text-align:center;">
-                            <div style="
-                              width:60px;
-                              height:60px;
-                              margin:0 auto 10px;
-                              display:flex;
-                              align-items:center;
-                              justify-content:center;
-                              font-weight:800;
-                              color:#0072C6;
-                              font-size:32px;
-                              font-family:Arial, sans-serif;
-                            ">
-                              2
-                            </div>
-
-                            <p style="margin:0;font-size:14px;font-weight:600;color:#1F2937;">
-                              Compressores
-                            </p>
-                            <p style="margin:4px 0 0;font-size:12px;color:#6B7280;">
-                              Potência e durabilidade
-                            </p>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-
                   </tr>
+
                   <tr>
-
-                    <!-- CARD 3 -->
-                    <td align="center" width="50%" style="padding:10px;">
-                      <table role="presentation" width="100%"
-                        style="background:#FFFFFF;border:1px solid #E5E7EB;border-radius:10px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
-                        <tr>
-                          <td style="text-align:center;">
-                            <div style="
-                              width:60px;
-                              height:60px;
-                              margin:0 auto 10px;
-                              display:flex;
-                              align-items:center;
-                              justify-content:center;
-                              font-weight:800;
-                              color:#0072C6;
-                              font-size:32px;
-                              font-family:Arial, sans-serif;
-                            ">
-                              3
-                            </div>
-
-                            <p style="margin:0;font-size:14px;font-weight:600;color:#1F2937;">
-                              Eletroventiladores
-                            </p>
-                            <p style="margin:4px 0 0;font-size:12px;color:#6B7280;">
-                              Máxima ventilação e fluxo
-                            </p>
-                          </td>
-                        </tr>
-                      </table>
+                    <td align="center" style="padding: 0 10px 30px;">
+                      <p style="font-size: 18px; line-height: 1.5; color: #333333; margin: 0;">
+                        Garanta a máxima proteção para o sistema de arrefecimento. Toda a nossa linha está com
+                        <strong style="color:#F94336;">preços imbatíveis</strong> para repor seu estoque agora.
+                      </p>
                     </td>
-
-                    <!-- CARD 4 -->
-                    <td align="center" width="50%" style="padding:10px;">
-                      <table role="presentation" width="100%"
-                        style="background:#FFFFFF;border:1px solid #E5E7EB;border-radius:10px;padding:16px;box-shadow:0 1px 4px rgba(0,0,0,0.05);">
-                        <tr>
-                          <td style="text-align:center;">
-                            <div style="
-                              width:60px;
-                              height:60px;
-                              margin:0 auto 10px;
-                              display:flex;
-                              align-items:center;
-                              justify-content:center;
-                              font-weight:800;
-                              color:#0072C6;
-                              font-size:32px;
-                              font-family:Arial, sans-serif;
-                            ">
-                              4
-                            </div>
-
-                            <p style="margin:0;font-size:14px;font-weight:600;color:#1F2937;">
-                              Condensadores
-                            </p>
-                            <p style="margin:4px 0 0;font-size:12px;color:#6B7280;">
-                              Desempenho superior
-                            </p>
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-
                   </tr>
+
+                  <tr>
+                    <td style="background-color: #f0f4f8; border-radius: 12px; padding: 25px 15px;">
+                      <table role="presentation" width="100%">
+                        <tr>
+                          <td align="center" style="padding-bottom: 20px;">
+                            <h2
+                              style="margin: 0; color: #005A8C; font-size: 22px; text-transform: uppercase; letter-spacing: 1px;">
+                              Recomendação APS
+                            </h2>
+                            <p style="margin: 8px 0 0; color: #555; font-size: 15px;">
+                              As melhores opções em <strong>Custo x Benefício</strong> do mercado.
+                              <br>Qualidade garantida <strong>Visconde</strong>.
+                            </p>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="50%" align="center" valign="top" style="padding: 5px;">
+                                  <div
+                                    style="background: #fff; padding: 15px 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); height: 100%;">
+
+                                    <img src="https://w7startup.com.br/ImagensAPS/aditivorosa.jpeg"
+                                      alt="Aditivo Rosa Visconde RV 61004"
+                                      style="width: 100%; max-width: 160px; height: auto; margin-bottom: 10px; border-radius: 6px;">
+
+                                    <p style="margin: 0; color: #005A8C; font-weight: bold; font-size: 14px;">RV 61004
+                                    </p>
+                                  </div>
+                                </td>
+
+                                <td width="50%" align="center" valign="top" style="padding: 5px;">
+                                  <div
+                                    style="background: #fff; padding: 15px 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); height: 100%;">
+
+                                    <img src="https://w7startup.com.br/ImagensAPS/aditivoazul.jpeg"
+                                      alt="Aditivo Azul Visconde RV 61002"
+                                      style="width: 100%; max-width: 160px; height: auto; margin-bottom: 10px; border-radius: 6px;">
+
+                                    <p style="margin: 0; color: #005A8C; font-weight: bold; font-size: 14px;">RV 61002
+                                    </p>
+                                  </div>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td align="center" style="padding-top: 20px;">
+                            <a href="https://wa.me/551936344855" style="
+                              display: inline-block;
+                              background: #25D366;
+                              color: #ffffff;
+                              font-weight: bold;
+                              text-decoration: none;
+                              padding: 12px 25px;
+                              border-radius: 50px;
+                              font-size: 14px;
+                              text-transform: uppercase;
+                              box-shadow: 0 3px 8px rgba(37, 211, 102, 0.4);
+                            ">
+                              Pedir cotação Visconde
+                            </a>
+                          </td>
+                        </tr>
+
+                      </table>
+                    </td>
+                  </tr>
+
                 </table>
               </td>
             </tr>
 
 
-
-            <!-- CATÁLOGO -->
             <tr>
               <td style="text-align:center;padding:20px 20px 30px;">
                 <p style="margin:0 0 14px;
@@ -387,83 +221,29 @@
                           font-weight:700;
                           color:#1F2937;
                           letter-spacing:0.3px;">
-                  Explore nosso catálogo completo de radiadores e aproveite as melhores condições
-                  neste mês!
+                  Explore nosso catálogo completo e aproveite as melhores condições neste mês!
                 </p>
                 <a href="https://www.apsdistribuidora.com.br/home" target="_blank" style="display:inline-block;
-                         background:linear-gradient(90deg,#005A8C 0%,#007FC2 100%);
-                         color:#ffffff;
-                         text-decoration:none;
-                         font-size:16px;
-                         font-weight:800;
-                         letter-spacing:0.4px;
-                         padding:14px 34px;
-                         border-radius:10px;
-                         text-transform:uppercase;
-                         box-shadow:0 4px 10px rgba(0,0,0,0.15);
-                         transition:all 0.4s ease;
-                         cursor:pointer;">
+                          background:linear-gradient(90deg,#005A8C 0%,#007FC2 100%);
+                          color:#ffffff;
+                          text-decoration:none;
+                          font-size:16px;
+                          font-weight:800;
+                          letter-spacing:0.4px;
+                          padding:14px 34px;
+                          border-radius:10px;
+                          text-transform:uppercase;
+                          box-shadow:0 4px 10px rgba(0,0,0,0.15);
+                          transition:all 0.4s ease;
+                          cursor:pointer;">
                   Acessar Catálogo
                 </a>
-                <!--<![endif]-->
-
-                <!-- BLOCO DE DESTAQUE -->
-            <tr>
-              <td style="padding:18px 24px 10px;text-align:center;background:#F7F8FB;border-radius:8px;">
-
-                <p style="margin:8px 0 0;font-size:16px;line-height:24px;color:#374151;font-weight:500;">
-                  <span style="color:#005A8C;font-weight:600;">Descontos
-                    imperdíveis</span> e atendimento especializado.
-                </p>
-              </td>
-            </tr>
-
-            <!-- CTA PRINCIPAL MODERNO -->
-            <style>
-              a.cta-button:hover {
-                background: linear-gradient(90deg, #FF6B00 0%, #F94336 100%) !important;
-                color: #ffffff !important;
-                box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25) !important;
-                transform: scale(1.03);
-              }
-            </style>
-
-            <tr>
-              <td style="text-align:center;padding:22px 20px 26px;">
-                <a href="https://wa.me/551936344855" target="_blank" class="cta-button" style="display:inline-block;
-                         background:linear-gradient(90deg,#F94336 0%,#FF6B00 100%);
-                         color:#ffffff;
-                         text-decoration:none;
-                         font-size:16px;
-                         font-weight:800;
-                         letter-spacing:0.4px;
-                         padding:14px 34px;
-                         border-radius:10px;
-                         text-transform:uppercase;
-                         box-shadow:0 4px 10px rgba(0,0,0,0.15);
-                         transition:all 0.4s ease;
-                         cursor:pointer;">
-                  Falar com um Especialista
-                </a>
-                <!--<![endif]-->
-                <p style="font-size:14px;
-                          font-weight:600;
-                          color:#F94336;
-                          margin-top:12px;
-                          letter-spacing:0.3px;">
-                  Atendimento imediato via <span style="color:#005A8C;">WhatsApp</span>
-                </p>
-
-              </td>
-            </tr>
-
-            <!-- BENEFÍCIOS (3 COLUNAS) -->
+            
             <tr>
               <td style="padding:0 18px 10px;">
                 <table role="presentation" width="100%" style="border-spacing:0;">
                   <tr>
 
-                    <!-- CARD 1 - ENTREGA ÁGIL -->
                     <td class="stack" width="33.33%" align="center" valign="top" style="padding:10px;">
                       <table role="presentation" width="100%"
                         style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;box-shadow:0 2px 5px rgba(0,0,0,0.05);">
@@ -483,7 +263,6 @@
                       </table>
                     </td>
 
-                    <!-- CARD 2 - MARCAS ORIGINAIS -->
                     <td class="stack" width="33.33%" align="center" valign="top" style="padding:10px;">
                       <table role="presentation" width="100%"
                         style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;box-shadow:0 2px 5px rgba(0,0,0,0.05);">
@@ -503,7 +282,6 @@
                       </table>
                     </td>
 
-                    <!-- CARD 3 - SUPORTE ESPECIALIZADO -->
                     <td class="stack" width="33.33%" align="center" valign="top" style="padding:10px;">
                       <table role="presentation" width="100%"
                         style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;box-shadow:0 2px 5px rgba(0,0,0,0.05);">
@@ -528,8 +306,42 @@
               </td>
             </tr>
 
+            <style>
+              a.cta-button:hover {
+                background: linear-gradient(90deg, #FF6B00 0%, #F94336 100%) !important;
+                color: #ffffff !important;
+                box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25) !important;
+                transform: scale(1.03);
+              }
+            </style>
 
-            <!-- CSS EMBED PARA WEBMAILS -->
+            <tr>
+              <td style="text-align:center;padding:22px 20px 26px;">
+                <a href="https://wa.me/551936344855" target="_blank" class="cta-button" style="display:inline-block;
+                          background:linear-gradient(90deg,#F94336 0%,#FF6B00 100%);
+                          color:#ffffff;
+                          text-decoration:none;
+                          font-size:16px;
+                          font-weight:800;
+                          letter-spacing:0.4px;
+                          padding:14px 34px;
+                          border-radius:10px;
+                          text-transform:uppercase;
+                          box-shadow:0 4px 10px rgba(0,0,0,0.15);
+                          transition:all 0.4s ease;
+                          cursor:pointer;">
+                  Falar com um Especialista
+                </a>
+                <p style="font-size:14px;
+                          font-weight:600;
+                          color:#F94336;
+                          margin-top:12px;
+                          letter-spacing:0.3px;">
+                  Atendimento imediato via <span style="color:#005A8C;">WhatsApp</span>
+                </p>
+
+              </td>
+            </tr>
             <style>
               a:hover {
                 background: linear-gradient(90deg, #007FC2 0%, #005A8C 100%) !important;
@@ -540,9 +352,6 @@
             </style>
 
 
-            <!-- ===== RODAPÉ CORRIGIDO (INLINE) ===== -->
-
-            <!-- FAIXA AZUL -->
             <tr>
               <td style="background:#005A8C;text-align:center;padding:12px">
                 <p style="color:#ffffff;font-size:14px;font-weight:600;margin:0">
@@ -551,7 +360,6 @@
               </td>
             </tr>
 
-            <!-- CENTRAL DE VENDAS -->
             <tr>
               <td style="background:#2E2E2E;color:#ffffff;padding:25px 15px 15px">
                 <p
@@ -577,7 +385,6 @@
               </td>
             </tr>
 
-            <!-- CENTROS DE DISTRIBUIÇÃO -->
             <tr>
               <td style="background:#2E2E2E;color:#ffffff;padding:15px">
                 <p
@@ -588,7 +395,7 @@
                   <tr>
                     <td width="50%" style="font-size:14px;color:#cccccc;line-height:1.8;text-align:center">
                       <strong>SP:</strong> São Paulo, Campinas, São João da Boa Vista e Bauru<br>
-                      <strong>ES:</strong> Cariacica | <strong>MG:</strong> Contagem
+                      <strong>ES:</strong> CarFiacica | <strong>MG:</strong> Contagem
                     </td>
                     <td width="50%" style="font-size:14px;color:#cccccc;line-height:1.8;text-align:center">
                       <strong>GO:</strong> Goiânia | <strong>PR:</strong> Curitiba e Londrina<br>
@@ -599,7 +406,6 @@
               </td>
             </tr>
 
-            <!-- SOCIAL -->
             <tr>
               <td style="background:#2E2E2E;text-align:center;padding:20px 15px 30px">
                 <a href="https://www.instagram.com/apsdistribuidoradeautopecas/" target="_blank"
