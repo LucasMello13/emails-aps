@@ -3,17 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="x-apple-disable-message-reformatting">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Promoção Linha Valeo | APS</title>
     <style>
+        /* Reset e Configurações Gerais */
         body {
             margin: 0;
             padding: 0;
-            background: #F3F3F5;
+            background-color: #F3F3F5;
             font-family: Arial, sans-serif;
             -webkit-font-smoothing: antialiased;
+            color: #333333;
         }
 
         table {
@@ -26,57 +27,79 @@
             border: 0;
             display: block;
             height: auto;
+            max-width: 100%;
         }
 
         .wrapper {
             width: 100%;
             table-layout: fixed;
-            background: #F3F3F5;
+            background-color: #F3F3F5;
             padding: 20px 0;
         }
 
         .main {
+            background-color: #ffffff;
+            margin: 0 auto;
             width: 100%;
             max-width: 600px;
-            margin: 0 auto;
-            background: #ffffff;
             border-radius: 10px;
             overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
-        /* Estilos do Novo Body */
-        .btn-green {
-            background: #009640;
-            color: #ffffff !important;
+        /* Botão do Meio (Novo Design) */
+        .btn-primary {
+            background-color: #009640;
+            color: #ffffff;
             text-decoration: none;
             padding: 14px 28px;
             border-radius: 8px;
             font-weight: bold;
-            display: inline-block;
             font-size: 15px;
             text-transform: uppercase;
-        }
-
-        .stack {
             display: inline-block;
-            width: 100%;
         }
 
-        @media (max-width:600px) {
-            h1 {
-                font-size: 22px !important;
-                line-height: 30px !important;
+        /* Cards de Produto (Compactos) */
+        .product-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            height: 100%;
+            border: 1px solid #E5E7EB;
+        }
+
+        .product-title {
+            font-size: 13px;
+            font-weight: 800;
+            color: #333;
+            margin-top: 8px;
+            text-align: left;
+            text-transform: uppercase;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Responsividade */
+        @media screen and (max-width: 600px) {
+            .product-card {
+                margin-bottom: 10px;
+            }
+
+            .mobile-padding {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+
+            .hero-text {
+                font-size: 20px !important;
+                line-height: 28px !important;
             }
 
             .stack {
                 display: block !important;
                 width: 100% !important;
-                padding-left: 0 !important;
-                padding-right: 0 !important;
-            }
-
-            .mobile-center {
-                text-align: center !important;
             }
         }
     </style>
@@ -84,240 +107,175 @@
 
 <body>
     <center class="wrapper">
-        <table role="presentation" class="main" width="100%">
+        <table class="main" width="100%">
 
             <tr>
                 <td style="background:#343947;text-align:center;padding:16px">
                     <a href="https://www.apsdistribuidora.com.br/home" target="_blank">
                         <img src="https://www.apsdistribuidora.com.br/wp-content/uploads/2021/05/cropped-LOGO-32-ANOS-SEM-FUNDO-2-300x103.png"
-                            width="220" alt="APS Distribuidora">
+                            width="220" alt="APS Distribuidora" style="display:inline-block;">
                     </a>
                 </td>
             </tr>
 
             <tr>
-                <td style="padding: 30px 20px 10px; text-align: center;">
-                    <h1
-                        style="margin:0; font-size:28px; line-height:36px; font-weight:900; color:#1F2937; text-transform:uppercase;">
-                        Toda Linha <span style="color:#88D809;">VALEO</span> com <br>Desconto Especial
-                    </h1>
-                    <div style="width: 60px; height: 4px; background: #88D809; margin: 15px auto; border-radius: 2px;">
-                    </div>
+                <td style="background-color: #005A8C; padding: 30px 20px; text-align: center;">
                     <p
-                        style="margin: 10px 0 0; font-size: 16px; color: #5B616E; font-weight: 700; font-family: 'Segoe UI', Arial, sans-serif;">
-                        Radiador, Condensador, Eletroventilador, Compressor e Aditivos
+                        style="margin: 0 0 10px; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; color: #AED6F1; font-weight: 700;">
+                        Oportunidade da Semana
                     </p>
+                    <h1 class="hero-text"
+                        style="margin: 0; font-size: 24px; line-height: 32px; color: #ffffff; font-weight: 700; font-family: Arial, sans-serif;">
+                        Já aproveitou a promoção especial de <br>
+                        <span
+                            style="color: #88D809; background: rgba(0,0,0,0.2); padding: 0 5px; border-radius: 4px;">Valeo</span>
+                        e
+                        <span
+                            style="color: #88D809; background: rgba(0,0,0,0.2); padding: 0 5px; border-radius: 4px;">Linha
+                            Pesada</span>
+                        na APS?
+                    </h1>
                 </td>
             </tr>
 
             <tr>
-                <td style="padding: 10px 10px 20px;">
-                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                        <tr>
-                            <td width="50%" align="center" valign="top" style="padding: 10px 5px 10px 10px;">
-                                <table width="100%"
-                                    style="max-width: 260px; border:1px solid #E5E7EB; border-radius:10px; padding:15px; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.06); margin: 0 auto;">
-                                    <tr>
-                                        <td align="center">
-                                            <img src="https://www.apsdistribuidora.com.br/imagens/produto/0000000051351_img.jpg"
-                                                alt="Radiador Valeo" width="150" height="150"
-                                                style="background:#f0f0f0; border-radius:6px; object-fit: contain; display:block;">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding-top:12px;">
-                                            <table width="100%">
-                                                <tr>
-                                                    <td
-                                                        style="font-size:13px; font-weight:800; color:#333; font-family: Arial, sans-serif;">
-                                                        RADIADOR
-                                                    </td>
-                                                    <td align="right">
-                                                        <img src="https://w7startup.com.br/ImagensAPS/ValeoLogo.png"
-                                                            alt="Valeo" width="40" style="display:block;">
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
+                <td height="20"></td>
+            </tr>
 
-                            <td width="50%" align="center" valign="top" style="padding: 10px 10px 10px 5px;">
-                                <table width="100%"
-                                    style="max-width: 260px; border:1px solid #E5E7EB; border-radius:10px; padding:15px; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.06); margin: 0 auto;">
-                                    <tr>
-                                        <td align="center">
-                                            <img src="https://www.apsdistribuidora.com.br/imagens/produto/0000000056239_img.jpg"
-                                                alt="Condensador Valeo" width="150" height="150"
-                                                style="background:#f0f0f0; border-radius:6px; object-fit: contain; display:block;">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding-top:12px;">
-                                            <table width="100%">
-                                                <tr>
-                                                    <td
-                                                        style="font-size:13px; font-weight:800; color:#333; font-family: Arial, sans-serif;">
-                                                        CONDENSADOR
-                                                    </td>
-                                                    <td align="right">
-                                                        <img src="https://w7startup.com.br/ImagensAPS/ValeoLogo.png"
-                                                            alt="Valeo" width="40" style="display:block;">
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
+            <tr>
+                <td class="mobile-padding" style="padding: 0 20px;">
+                    <table width="100%" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td width="50%" valign="top" style="padding: 5px;">
+                                <div class="product-card">
+                                    <img src="https://www.apsdistribuidora.com.br/imagens/produto/0000000067453_img.jpg"
+                                        alt="Radiador" width="110"
+                                        style="margin: 0 auto; max-height: 110px; object-fit: contain;">
+                                    <table width="100%" style="margin-top: 8px;">
+                                        <tr>
+                                            <td class="product-title">RADIADOR</td>
+                                            <td align="right">
+                                                <img src="https://w7startup.com.br/ImagensAPS/ValeoLogo.png" width="30"
+                                                    alt="Valeo">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                            <td width="50%" valign="top" style="padding: 5px;">
+                                <div class="product-card">
+                                    <img src="https://www.apsdistribuidora.com.br/imagens/produto/0000000056239_img.jpg"
+                                        alt="Condensador" width="110"
+                                        style="margin: 0 auto; max-height: 110px; object-fit: contain;">
+                                    <table width="100%" style="margin-top: 8px;">
+                                        <tr>
+                                            <td class="product-title">CONDENSADOR</td>
+                                            <td align="right">
+                                                <img src="https://w7startup.com.br/ImagensAPS/ValeoLogo.png" width="30"
+                                                    alt="Valeo">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </td>
                         </tr>
                         <tr>
-                            <td width="50%" align="center" valign="top" style="padding: 10px 5px 10px 10px;">
-                                <table width="100%"
-                                    style="max-width: 260px; border:1px solid #E5E7EB; border-radius:10px; padding:15px; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.06); margin: 0 auto;">
-                                    <tr>
-                                        <td align="center">
-                                            <img src="https://www.apsdistribuidora.com.br/imagens/produto/0000000060013_img.jpg"
-                                                alt="Eletroventilador Valeo" width="150" height="150"
-                                                style="background:#f0f0f0; border-radius:6px; object-fit: contain; display:block;">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding-top:12px;">
-                                            <table width="100%">
-                                                <tr>
-                                                    <td
-                                                        style="font-size:13px; font-weight:800; color:#333; font-family: Arial, sans-serif;">
-                                                        ELETROVENTILADOR
-                                                    </td>
-                                                    <td align="right">
-                                                        <img src="https://w7startup.com.br/ImagensAPS/ValeoLogo.png"
-                                                            alt="Valeo" width="40" style="display:block;">
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
+                            <td width="50%" valign="top" style="padding: 5px;">
+                                <div class="product-card">
+                                    <img src="https://www.apsdistribuidora.com.br/imagens/produto/0000000060013_img.jpg"
+                                        alt="Eletroventilador" width="110"
+                                        style="margin: 0 auto; max-height: 110px; object-fit: contain;">
+                                    <table width="100%" style="margin-top: 8px;">
+                                        <tr>
+                                            <td class="product-title">ELETROVENTILADOR</td>
+                                            <td align="right">
+                                                <img src="https://w7startup.com.br/ImagensAPS/ValeoLogo.png" width="30"
+                                                    alt="Valeo">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </td>
-
-                            <td width="50%" align="center" valign="top" style="padding: 10px 10px 10px 5px;">
-                                <table width="100%"
-                                    style="max-width: 260px; border:1px solid #E5E7EB; border-radius:10px; padding:15px; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.06); margin: 0 auto;">
-                                    <tr>
-                                        <td align="center">
-                                            <img src="https://www.apsdistribuidora.com.br/imagens/produto/0000000062306_img.jpg"
-                                                alt="Compressor Valeo" width="150" height="150"
-                                                style="background:#f0f0f0; border-radius:6px; object-fit: contain; display:block;">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding-top:12px;">
-                                            <table width="100%">
-                                                <tr>
-                                                    <td
-                                                        style="font-size:13px; font-weight:800; color:#333; font-family: Arial, sans-serif;">
-                                                        COMPRESSOR
-                                                    </td>
-                                                    <td align="right">
-                                                        <img src="https://w7startup.com.br/ImagensAPS/ValeoLogo.png"
-                                                            alt="Valeo" width="40" style="display:block;">
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
+                            <td width="50%" valign="top" style="padding: 5px;">
+                                <div class="product-card">
+                                    <img src="https://www.apsdistribuidora.com.br/imagens/produto/0000000062306_img.jpg"
+                                        alt="Compressor" width="110"
+                                        style="margin: 0 auto; max-height: 110px; object-fit: contain;">
+                                    <table width="100%" style="margin-top: 8px;">
+                                        <tr>
+                                            <td class="product-title">COMPRESSOR</td>
+                                            <td align="right">
+                                                <img src="https://w7startup.com.br/ImagensAPS/ValeoLogo.png" width="30"
+                                                    alt="Valeo">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </td>
                         </tr>
-
                         <tr>
-                            <td colspan="2" align="center" style="padding: 10px;">
-                                <table width="100%"
-                                    style="max-width: 260px; border:1px solid #E5E7EB; border-radius:10px; padding:15px; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.06); margin: 0 auto;">
-                                    <tr>
-                                        <td align="center">
-                                            <img src="https://www.apsdistribuidora.com.br/imagens/produto/0000000059701_img.jpg"
-                                                alt="Aditivos Valeo" width="150" height="150"
-                                                style="background:#f0f0f0; border-radius:6px; object-fit: contain; display:block;">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td style="padding-top:12px;">
-                                            <table width="100%">
-                                                <tr>
-                                                    <td
-                                                        style="font-size:13px; font-weight:800; color:#333; font-family: Arial, sans-serif;">
-                                                        ADITIVOS
-                                                    </td>
-                                                    <td align="right">
-                                                        <img src="https://w7startup.com.br/ImagensAPS/ValeoLogo.png"
-                                                            alt="Valeo" width="40" style="display:block;">
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
+                            <td colspan="2" align="center" style="padding: 5px;">
+                                <div class="product-card" style="max-width: 240px; margin: 0 auto;">
+                                    <img src="https://www.apsdistribuidora.com.br/imagens/produto/0000000059701_img.jpg"
+                                        alt="Aditivos" width="110"
+                                        style="margin: 0 auto; max-height: 110px; object-fit: contain;">
+                                    <table width="100%" style="margin-top: 8px;">
+                                        <tr>
+                                            <td class="product-title">ADITIVOS</td>
+                                            <td align="right">
+                                                <img src="https://w7startup.com.br/ImagensAPS/ValeoLogo.png" width="30"
+                                                    alt="Valeo">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </td>
                         </tr>
                     </table>
                 </td>
             </tr>
+
             <tr>
-                <td style="text-align:center;padding:0 20px 50px;">
-                    <a href="https://www.apsdistribuidora.com.br/home" target="_blank" style="display:inline-block;
-                    background:#005A8C;color:#ffffff;text-decoration:none;font-size:16px;font-weight:bold;
-                    padding:14px 30px;border-radius:6px;text-transform:uppercase;">
-                        Ver Catálogo Completo
+                <td style="text-align: center; padding: 25px 0;">
+                    <a href="https://www.apsdistribuidora.com.br/home"
+                        style="color: #005A8C; font-size: 14px; font-weight: bold; text-decoration: none; text-transform:uppercase;">
+                        Ver Catálogo Completo &rsaquo;
                     </a>
                 </td>
             </tr>
 
             <tr>
-                <td style="padding: 10px 20px 30px;">
-                    <table width="100%"
-                        style="background: #F1F5F9; border-radius: 8px; border-left: 5px solid #005A8C; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
-                        <tr>
-                            <td style="padding: 20px;">
-                                <h2
-                                    style="margin: 0 0 10px; color: #005A8C; font-size: 18px; text-transform: uppercase; font-family: Arial, sans-serif; font-weight: 800;">
-                                    Linha Pesada</h2>
-                                <p
-                                    style="margin: 0 0 20px; color: #4B5563; font-size: 14px; line-height: 1.5; font-weight: 500;">
-                                    Desconto especial nos <strong>Radiadores, Intercoolers e Colméias</strong>.
-                                </p>
-                                <table role="presentation" width="100%">
-                                    <tr>
-                                        <td align="center" style="padding: 5px;">
-                                            <img src="https://w7startup.com.br/ImagensAPS/viscondee.png" alt="Visconde"
-                                                width="80" style="display:block; max-width:100%;">
-                                        </td>
-                                        <td align="center" style="padding: 5px;">
-                                            <img src="https://w7startup.com.br/ImagensAPS/mahle.png" alt="Mahle"
-                                                width="80" style="display:block; max-width:100%;">
-                                        </td>
-                                        <td align="center" style="padding: 5px;">
-                                            <img src="https://w7startup.com.br/ImagensAPS/titanx.png" alt="Titanx"
-                                                width="80" style="display:block; max-width:100%;">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
+                <td class="mobile-padding" style="padding: 0 20px 30px;">
+                    <div
+                        style="background-color: #F8FAFC; border-radius: 8px; padding: 20px; border: 1px solid #E2E8F0; border-left: 5px solid #005A8C; text-align: center;">
+                        <h2
+                            style="margin: 0 0 10px; color: #005A8C; font-size: 18px; text-transform: uppercase; font-family: Arial, sans-serif; font-weight: 800;">
+                            Linha Pesada
+                        </h2>
+                        <p style="margin: 0 0 15px; font-size: 14px; color: #4B5563;">
+                            Desconto especial nos <strong>Radiadores, Intercoolers e Colméias</strong>.
+                        </p>
+                        <table width="100%" style="max-width: 320px; margin: 0 auto;">
+                            <tr>
+                                <td align="center"><img src="https://w7startup.com.br/ImagensAPS/viscondee.png"
+                                        alt="Visconde" width="70" style="max-width:100%;"></td>
+                                <td align="center"><img src="https://w7startup.com.br/ImagensAPS/mahle.png" alt="Mahle"
+                                        width="70" style="max-width:100%;"></td>
+                                <td align="center"><img src="https://w7startup.com.br/ImagensAPS/titanx.png"
+                                        alt="Titanx" width="70" style="max-width:100%;"></td>
+                            </tr>
+                        </table>
+                    </div>
                 </td>
             </tr>
 
             <tr>
-                <td align="center" style="padding: 0 20px 40px;">
-                    <a href="https://wa.me/551936344855" class="btn-green">
+                <td align="center" style="padding-bottom: 40px;">
+                    <a href="https://wa.me/551936344855" class="btn-primary">
                         Falar com um Especialista
                     </a>
                 </td>
             </tr>
-
 
             <tr>
                 <td style="background:#005A8C;text-align:center;padding:12px">
@@ -402,4 +360,4 @@
     </center>
 </body>
 
-</html>
+</html> 
